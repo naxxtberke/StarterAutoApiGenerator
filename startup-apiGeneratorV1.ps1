@@ -53,6 +53,10 @@ $csprojFilePath = "$webApiPath\$apiNameWithPrefix.csproj"
 
 # Post-build event için eklenmesi gereken XML
 $postBuildEvent = @"
+
+    <Target Name="PostPublish" AfterTargets="Publish">
+        <Exec Command="del `$(PublishDir)appsettings.Development.json" />
+    </Target>
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="echo Publish klasörü temizleniyor&#xD;&#xA;rmdir /s /q &quot;publish&quot;&#xD;&#xA;echo Publish klasörü temizlendi." />
     </Target>
