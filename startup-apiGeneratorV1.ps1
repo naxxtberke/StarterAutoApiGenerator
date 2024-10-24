@@ -89,6 +89,10 @@ else {
     Write-Host "Required Files klasoru bulunamadi: $requiredFilesFolderPath"
 }
 
+# Serilog NuGet paketini eklemek için
+dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.Console
+dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.File
+
 Write-Host "Proje yapisi olusturuldu!"
 
 Write-Host "Devam etmek icin bir tusa basin..."
