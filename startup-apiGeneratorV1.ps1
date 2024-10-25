@@ -90,6 +90,8 @@ else {
 }
 
 # Serilog NuGet paketini eklemek için
+dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Settings.Configuration
+dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Extensions.Hosting
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.Console
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.File
 
