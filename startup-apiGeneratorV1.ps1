@@ -94,6 +94,7 @@ dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Settings.Conf
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Extensions.Hosting
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.Console
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.File
+dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Newtonsoft.Json
 
 Write-Host "Proje yapisi olusturuldu!"
 
