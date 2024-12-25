@@ -96,6 +96,11 @@ dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.Console
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Serilog.Sinks.File
 dotnet add "$webApiPath\$apiNameWithPrefix.csproj" package Newtonsoft.Json
 
+
+dotnet tool install --global dotnet-outdated-tool
+
+dotnet outdated "$webApiPath\$apiNameWithPrefix.csproj" --upgrade
+
 Write-Host "Proje yapisi olusturuldu!"
 
 Write-Host "Devam etmek icin bir tusa basin..."
